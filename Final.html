@@ -1,0 +1,147 @@
+<!-- 
+    This is The final project to the JavaScript course.
+    It will demoenstrate the profeceny that i have in HTML,CSS, Javascript and JQUERY.
+-->
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		<title>Alvins Pizza</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+		<meta content="width=device-width,initial-scale=1.0" name="viewport">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="./css/main.css">
+		<style>
+			/**#menuBG{width:400px;height:470px;margin:10px auto;*/
+			#frmMenu{width:400px;height:200px;margin-left: 40%;margin-top:15px;}
+			h1 { margin-left:45%;}
+        	.sizeMenu{width:180px;height:200px;float:left;border:2.5px solid #999999; border-radius: 8px;background-color: aliceblue;opacity: .9;color:black;padding-left: 5px;}
+			.cheeseMenu{width:180px;height:200px;float:left;border:2.5px solid #999999; border-radius: 8px;background-color: aliceblue;opacity: .9;color:black;padding-left: 5px; margin-top: 10px;}
+			.crustMenu{width:180px;height:200px;float:left;border:2.5px solid #999999; border-radius: 8px;background-color: aliceblue;opacity: .9;color:black;padding-left: 5px;margin-left: 40px; margin-top: 10px;}
+			.meatMenu{width:180px;height:200px;float:right;border:2.5px solid #999999; border-radius: 8px;background-color: aliceblue;opacity: .9;color:black;padding-left: 5px;}
+			.vegMenu{width:180px;height:240px;float:left;border:2.5px solid #999999; border-radius: 8px;background-color: aliceblue;opacity: .9;color:black;padding-left: 5px;margin-left: 40px; margin-top: 10px;}
+			.sauceMenu{width:180px;height:240px;float:left;border:2.5px solid #999999; border-radius: 8px;background-color: aliceblue;opacity: .9;color:black;padding-left: 5px; margin-top: 10px;}
+			.cart{width:400px;height:auto;float:left;border:2.5px solid #999999; border-radius: 8px;background-color: aliceblue;opacity: .9;color:black;padding-left: 5px;padding-right:5px;margin-top: 10px;}
+        	#btnOrder{margin:10px 0px 0px 100px;width:100px;height:40px}
+			#ingredientsOnePrice{text-align: right;}
+			#ingredientsTwoPrice{text-align: right;}
+			#ingredientsThreePrice{text-align: right;}
+			#totalPrice{text-align: right;}
+			
+		</style>
+	</head>
+	<body>
+		<div id ="BGphoto">
+		<div id="menuBG">
+			<div class="banner"><img src="./images/banner.jpeg" alt="Pizza Fusion" width = "400" heigth="200"/></div>
+			<button type="button" class="btn btn-secondary" onclick="main()"style="margin-left:48%;margin-top:10px;">Place Order</button>
+			<form id="frmMenu">
+				<div class="sizeMenu">
+					<h3>Size:</h3>
+					<input class="size" type="radio" name="Size" value="Personal Pizza"> Personal Pizza<br>
+					<input class="size" type="radio" name="Size" value="Medium Pizza"> Medium Pizza<br>
+					<input class="size" type="radio" name="Size" value="Large Pizza" checked> Large Pizza<br>
+					<input class="size" type="radio" name="Size" value="Extra Large Pizza"> Extra Large Pizza<br>
+				</div>
+				<div class="meatMenu">
+					<h3>Meats:</h3>
+					<input class="meats" type="checkbox" name="Meat" value="Pepperoni"> Pepperoni<br>
+					<input class="meats" type="checkbox" name="Meat" value="Sausage"> Sausage <br>
+					<input class="meats" type="checkbox" name="Meat" value="Canadian Bacon"> Canadian Bacon<br> 
+					<input class="meats" type="checkbox" name="Meat" value="Ground Beef"> Ground Beef<br>
+					<input class="meats" type="checkbox" name="Meat" value="Anchovy"> Anchovy<br>
+					<input class="meats" type="checkbox" name="Meat" value="Chicken"> Chicken<br>
+                </div>
+                <div class="cheeseMenu">
+					<h3>Cheese:</h3>
+					<input class="Cheese" type="radio" name="Cheese" value="Regular Cheese"> Regular Cheese<br>
+					<input class="Cheese" type="radio" name="Cheese" value="No Cheese"> No Cheese<br>
+					<input class="Cheese" type="radio" name="Cheese" value="Extra Cheese" checked> Extra Cheese<br>
+                </div>
+                <div class="crustMenu">
+					<h3>Crust:</h3>
+					<input class="Crust" type="radio" name="Crust" value="Plain Crust"> Plain Crust<br>
+					<input class="Crust" type="radio" name="Crust" value="Garlic Butter Crust"> Garlic Butter Crust<br>
+					<input class="Crust" type="radio" name="Crust" value="Cheese Stuffed Crust" checked> Cheese Stuffed Crust<br>
+                    <input class="Crust" type="radio" name="Crust" value="Spicy Crust"> Spicy Crust<br>
+                    <input class="Crust" type="radio" name="Crust" value="House Special Crust"> House Special Crust<br>
+                </div>
+                <div class="sauceMenu">
+					<h3>Sauce:</h3>
+					<input class="Sauce" type="radio" name="Sauce" value="Marinara sauce"> Marinara Sauce<br>
+					<input class="Sauce" type="radio" name="Sauce" value="White sauce"> White Sauce<br>
+                    <input class="Sauce" type="radio" name="Sauce" value="Barbeque sauce" checked> Barbeque Sauce<br>
+                    <input class="Sauce" type="radio" name="Sauce" value= "No sauce"> No Sauce<br>
+                </div>
+                <div class="vegMenu">
+                    <h3>Veggies:</h3>
+                    <input class="Veggies" type="checkbox" name="Veg" value="Tomatoes"> Tomatoes<br>
+					<input class="Veggies" type="checkbox" name="Veg" value="Onoins"> Onoins<br>
+					<input class="Veggies" type="checkbox" name="Veg" value="Olives"> Olives<br> 
+					<input class="Veggies" type="checkbox" name="Veg" value="Green Peppers"> Green peppers<br>
+					<input class="Veggies" type="checkbox" name="Veg" value="Mushrooms"> Mushrooms<br>
+                    <input class="Veggies" type="checkbox" name="Veg" value="Pineapple"> Pineapple<br>
+                    <input class="Veggies" type="checkbox" name="Veg" value="Spinach"> Spinach<br>
+					<input class="Veggies" type="checkbox" name="Veg" value="Jalapeno"> Jalapeno<br>
+                </div>
+				<div class ="cart">
+						<h3>Ingredients:</h3>
+						<div class="container1">
+							<div class="row">
+								<div class="col-md">
+									<div id="ingredientsOne"></div>
+								</div>
+								<div class="col-sm">
+									<div id="ingredientsOnePrice"></div>
+								</div>
+							</div>
+						</div>
+						<div class="container2">
+								<h4>Vegatables</h4>
+								<div class="row justify-content-md-center"">
+									<div class="col-md-auto">
+										<div id="ingredientsTwo"></div>
+									</div>
+									<div class="col-sm">
+										<div id="ingredientsTwoPrice"></div>	
+									</div>
+								</div>
+						</div>
+						<div class="container3">
+							<h4>Meats</h4>
+							<div class="row justify-content-md-center"">
+								<div class="col-md-auto">
+									<div id="ingredientsThree"></div>
+								</div>
+								<div class="col-sm">
+									<div id="ingredientsThreePrice"></div>	
+								</div>
+							</div>
+						</div>
+						<div class="container4">
+								<div class="row">
+									<div class="col-md">
+										<h3>Total:</h3>
+									</div>
+									<div class="col-sm">
+										<div id="totalPrice"></div>	
+									</div>
+								</div>
+							</div>		
+					
+				</div>
+				
+			</form>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script src="./js/final.js"></script>
+	</div>
+	</div>
+	</body>
+</html>
+
+        

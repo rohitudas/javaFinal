@@ -1,0 +1,21 @@
+#BGphoto {
+    background: url(../images/background.jpg) no-repeat 5% 5%;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-lize: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    display: block;
+    height: 2000px;
+    z-index: 100;
+    color: #fff;
+
+}
+.banner{
+    margin-left: 40%;
+    display: block;
+    border: 3px solid #999999;
+    width: 406px;
+    border-radius: 2px;
+}
